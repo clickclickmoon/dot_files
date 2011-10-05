@@ -1,16 +1,17 @@
 # click.click.moon's ~/.bashrc
 
-# If not running interactively, don't do anything
+# Kill non-interactive sessions and start tmux
 [[ $- != *i* ]] && return
 [[ $TERM != "screen" ]] && tmux && exit
 
+# Show a random custom cowfile with an obsense fortune
 cowfile=`ls ~/cowfiles/*.cow | sort -R | tail -1`
 command cowsay -f $cowfile $(fortune -o)
 
 export EDITOR="vim"
 
 # COLORS (Got Tired Of Escapes)
-Color_Off='\e[0m'       # Text Reset
+Color_Off='\e[0m'
 Green='\e[0;32m'
 Yellow='\e[0;33m'
 Blue='\e[0;34m'
@@ -19,37 +20,29 @@ White='\e[0;37m'
 On_Red='\e[41m'
 On_White='\e[47m'
 
+# ls aliases that I like a lot
 alias ls='ls --color=auto'
-alias ir='ls -R'
-
+alias lr='ls -R'
 alias ll='ls -l'
 alias la='ll -A'
-alias lx='ll -BX'                   # sort by extension
-alias lz='ll -rS'                   # sort by size
-alias lt='ll -rt'                   # sort by date
+alias lx='ll -BX' # Sort: eXtension
+alias lz='ll -rS' # Sort: siZe
+alias lt='ll -rt' # Sort: daTe
 
 # safety features
 alias cp='cp -i'
 alias mv='mv -i'
-alias rm='rm -I'                    # 'rm -i' prompts for every file
+alias rm='rm -I'
 alias ln='ln -i'
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
+# Rainbo Brite up my shit
 alias diff='colordiff'
 alias grep='grep --color=auto'
 alias more='less'
 alias pacman='pacman-color'
-
-# git aliases care of: http://richardhulse.blogspot.com/2008/06/using-git.html
-alias gst='git status '
-alias gc='git commit '
-alias gca='git commit -a '
-alias ga='git add '
-alias gco='git checkout '
-alias gb='git branch '
-alias gm='git merge '
 
 # Autocomplete man and sudo commands
 complete -cf sudo
