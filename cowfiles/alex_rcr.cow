@@ -1,0 +1,46 @@
+## custom.cow
+## click's annoying cow crap
+##
+$the_cow = <<EOC;
+             $thoughts
+              $thoughts
+\e[0;37mcccccccccccccccccccccccccccccccccccccccccccccccccccc\e[0m
+\e[0;37mcccccccccccccccc\e[0m                         \e[0;37mccccccccccc\e[0m
+\e[0;37mcccccccccccccc\e[0m                    \e[0;37m\e[43mCCC\e[0m      \e[0;37mccccccccc\e[0m
+\e[0;37mcccccccccccccc\e[0m                    \e[0;37m\e[43mCCC\e[0m      \e[0;37mccccccccc\e[0m
+\e[0;37mcccccccccccccc\e[0m                  \e[0;37m\e[43mCCCCCCC\e[0m    \e[0;37mccccccccc\e[0m
+\e[0;37mcccccccccccccc\e[0m                \e[0;37m\e[43mCCCCCCCCC\e[0m    \e[0;37mccccccccc\e[0m
+\e[0;37mcccccccccccccccc\e[0m         \e[0;37m\e[43mCCCCCCCCCCCCCC\e[0m    \e[0;37mccccccccc\e[0m
+\e[0;37mcccccccccc\e[0m    \e[0;37mccccc\e[0m  \e[0;37m\e[43mCCCCCCCCC\e[0m    \e[0;37m\e[43mCCCCC\e[0m    \e[0;37mccccccccc\e[0m
+\e[0;37mccccccc\e[0m   \e[0;37m\e[43mCC\e[0m  \e[0;37mccccc\e[0m\e[0;37m\e[43mCC\e[0m  \e[0;37m\e[43mCCCCC\e[0m  \e[0;37m\e[43mCCCC\e[0m   \e[0;37m\e[43mCC\e[0m    \e[0;37mccccccccc\e[0m
+\e[0;37mccccccc\e[0m   \e[0;37m\e[43mCC\e[0m  \e[0;37mccccc\e[0m\e[0;37m\e[43mCC\e[0m  \e[0;37m\e[43mCCCCC\e[0m  \e[0;37m\e[43mCCCC\e[0m   \e[0;37m\e[43mCC\e[0m    \e[0;37mccccccccc\e[0m
+\e[0;37mcc\e[0m        \e[0;37m\e[43mCC\e[0m  \e[0;37mccccc\e[0m\e[0;37m\e[43mCC\e[0m  \e[0;37m\e[43mCCCCC\e[0m  \e[0;37m\e[43mCCCC\e[0m   \e[0;37m\e[43mCC\e[0m  \e[0;37m\e[43mCC\e[0m\e[0;37mccccccccc\e[0m
+  \e[0;37m\e[43mCCCCCCCCCC\e[0m    \e[0;37mccc\e[0m\e[0;37m\e[43mCCCCCCCCCCCCCCCCCCCCCCCC\e[0m\e[0;37mccccccccc\e[0m
+  \e[0;37m\e[43mCCCCC\e[0m         \e[0;37mccc\e[0m\e[0;37m\e[43mCCCC\e[0m     \e[0;37m\e[43mCCCCCCCCCCC\e[0m       \e[0;37mcccccc\e[0m
+  \e[0;37m\e[43mCCCCCCCCCCCC\e[0m     \e[0;37m\e[43mCCCC\e[0m     \e[0;37m\e[43mCCCCCCCCC\e[0m  \e[0;97m@@@@@@@\e[0m \e[0;37mccccc\e[0m
+     \e[0;37m\e[43mCCCCCCCCC\e[0m\e[0;97m@@\e[0m   \e[0;37m\e[43mCCCC\e[0m     \e[0;37m\e[43mCCCCCC\e[0m   \e[0;97m@@@@@@@@@@@\e[0m   \e[0;37mc\e[0m
+  \e[0;37m\e[43mCCC\e[0m         \e[0;97m@@\e[0m     \e[0;37m\e[43mCCCCCCCCCCCCC\e[0m   \e[0;97m@@@@@@@@@@@\e[0m   \e[0;37mc\e[0m
+  \e[0;37m\e[43mCCCCCCCCCC\e[0m  \e[0;97m@@\e[0m   \e[0;97m@@\e[0m                \e[0;97m@@@@@@@@@@@\e[0m   \e[0;37mc\e[0m
+  \e[0;37m\e[43mCCCCCCCCCCCC\e[0m\e[0;97m@@\e[0m   \e[0;97m@@@@@@@@@@@@@\e[0m           \e[0;97m@@@@@@@@\e[0m\e[0;37mc\e[0m
+  \e[0;37m\e[43mCCCCCCCCCCCC\e[0m\e[0;97m@@\e[0m   \e[0;97m@@@@@@@@@@@@@\e[0m           \e[0;97m@@@@@@@@\e[0m\e[0;37mc\e[0m
+  \e[0;37m\e[43mCCCCCCCCCCCC\e[0m\e[0;97m@@@@@@@@@@@@@@@@\e[0m    \e[0;37m\e[43mCCCCCCCCC\e[0m        \e[0;37mc\e[0m
+  \e[0;37m\e[43mCCCCCCCCCCCC\e[0m\e[0;37mcc\e[0m   \e[0;97m@@@@@@@@@@@\e[0m  \e[0;37m\e[43mCCCCCCCCCCC\e[0m   \e[0;37m\e[43mCCCCC\e[0m 
+\e[0;37mcc\e[0m   \e[0;37m\e[43mCCCCCCCCC\e[0m\e[0;37mcc\e[0m   \e[0;97m@@@@@@@@@@@\e[0m  \e[0;37m\e[43mCCCCCCCCCCC\e[0m   \e[0;37m\e[43mCCCCC\e[0m 
+\e[0;37mccccc\e[0m         \e[0;37mcc\e[0m   \e[0;97m@@@@@@@@@@@@@\e[0m  \e[0;37m\e[43mCCCCCCCCC\e[0m   \e[0;37m\e[43mCCCCC\e[0m 
+\e[0;37mcccccccccccccccc\e[0m   \e[0;97m@@@@@@@@@@@@@\e[0m  \e[0;37m\e[43mCCCCCCCCCCCCCCCCC\e[0m 
+\e[0;37mcccccccccccccccc\e[0m   \e[0;97m@@@@@@@@@@@@@\e[0m           \e[0;37m\e[43mCCCCC\e[0m   \e[0;37mc\e[0m
+\e[0;37mcccccccccccccccc\e[0m   \e[0;97m@@@@@@@@@@@@@\e[0m           \e[0;37m\e[43mCCCCC\e[0m   \e[0;37mc\e[0m
+\e[0;37mcccccccccccccccc\e[0m   \e[0;97m@@@@@@@@@@@@@@@\e[0m   \e[0;37m\e[43mCCCCCCCCCCC\e[0m   \e[0;37mc\e[0m
+\e[0;37mccccccccccccccccccc\e[0m                                \e[0;37mc\e[0m
+\e[0;37mccccccccccccccccccc\e[0m                             \e[0;37mcccc\e[0m
+\e[0;37mccccccccccccccccccc\e[0m  \e[0;34moooo\e[0m     \e[0;34mooooooooo\e[0m  \e[0;34mooooo\e[0m  \e[0;37mcccc\e[0m
+\e[0;37mccccccccccccccccccc\e[0m  \e[0;34mooooooo\e[0m  \e[0;34mooooooooooo\e[0m       \e[0;37mcccc\e[0m
+\e[0;37mccccccccccccccccccc\e[0m  \e[0;34mooooooooo\e[0m  \e[0;34moooooooooooooo\e[0m  \e[0;37mcccc\e[0m
+\e[0;37mccccccccccccccccccc\e[0m  \e[0;34mooooooooo\e[0m  \e[0;34moooooooooooooo\e[0m  \e[0;37mcccc\e[0m
+\e[0;37mccccccccccccccccccccc\e[0m  \e[0;34mooooooo\e[0m  \e[0;34moooooooooooooooo\e[0m   \e[0;37mc\e[0m
+\e[0;37mccccccccccccccccccccc\e[0m  \e[0;34mooooooo\e[0m  \e[0;34moooooooooooooooo\e[0m   \e[0;37mc\e[0m
+\e[0;37mccccccccccccccccccccc\e[0m  \e[0;34mooooooo\e[0m  \e[0;34moooooooooooooooo\e[0m   \e[0;37mc\e[0m
+\e[0;37mccccccccccccccccccccc\e[0m    \e[0;34mooooo\e[0m         \e[0;34mooooooooo\e[0m   \e[0;37mc\e[0m
+\e[0;37mccccccccccccccccccc\e[0m                                \e[0;37mc\e[0m              
+EOC
+

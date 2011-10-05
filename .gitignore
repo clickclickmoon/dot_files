@@ -5,3 +5,4 @@
 .ssh/id_rsa
 .ssh/known_hosts
 *.swp
+*.swo

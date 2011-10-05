@@ -1,0 +1,8 @@
+## custom.cow
+## click's annoying cow crap
+##
+$the_cow = <<EOC;
+             \e[0;31m$thoughts
+              $thoughts
+EOC
+

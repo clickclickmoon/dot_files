@@ -4,7 +4,8 @@
 [[ $- != *i* ]] && return
 [[ $TERM != "screen" ]] && tmux && exit
 
-command cowsay -f /usr/share/cows/eyes.cow $(fortune -o)
+cowfile=`ls ~/cowfiles/*.cow | sort -R | tail -1`
+command cowsay -f $cowfile $(fortune -o)
 
 export EDITOR="vim"
 
@@ -53,11 +54,6 @@ alias gm='git merge '
 # Autocomplete man and sudo commands
 complete -cf sudo
 complete -cf man
-
-function doit {
-      local git_status=$(git status 2> /dev/null)
-      echo "$git_status"
-}
 
 function gitline {
 	local git_branch=$( git name-rev HEAD 2> /dev/null | sed 's/HEAD\ \(.\)/\1/' )
