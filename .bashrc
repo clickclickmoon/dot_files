@@ -6,8 +6,21 @@
 
 command cowsay -f /usr/share/cows/eyes.cow $(fortune -o)
 
+export EDITOR="vim"
+
+# COLORS (Got Tired Of Escapes)
+Color_Off='\e[0m'       # Text Reset
+Green='\e[0;32m'
+Yellow='\e[0;33m'
+Blue='\e[0;34m'
+Purple='\e[0;35m'
+White='\e[0;37m'
+On_Red='\e[41m'
+On_White='\e[47m'
+
 alias ls='ls --color=auto'
 alias ir='ls -R'
+
 alias ll='ls -l'
 alias la='ll -A'
 alias lx='ll -BX'                   # sort by extension
@@ -28,9 +41,41 @@ alias grep='grep --color=auto'
 alias more='less'
 alias pacman='pacman-color'
 
+# git aliases care of: http://richardhulse.blogspot.com/2008/06/using-git.html
+alias gst='git status '
+alias gc='git commit '
+alias gca='git commit -a '
+alias ga='git add '
+alias gco='git checkout '
+alias gb='git branch '
+alias gm='git merge '
+
+# Autocomplete man and sudo commands
 complete -cf sudo
 complete -cf man
 
-PROMPT_COMMAND='history -a;echo -en "\033[m\033[38;5;2m"$(( `sed -nu "s/MemFree:[\t ]\+\([0-9]\+\) kB/\1/p" /proc/meminfo`/1024))"\033[38;5;22m/"$((`sed -nu "s/MemTotal:[\t ]\+\([0-9]\+\) kB/\1/Ip" /proc/meminfo`/1024 ))MB"\t\033[m\033[38;5;55m$(< /proc/loadavg)\033[m"'
- PS1='\[\e[m\n\e[1;30m\][$$:$PPID \j:\!\[\e[1;30m\]]\[\e[0;36m\] \T \d \[\e[1;30m\][\[\e[1;34m\]\u@\H\[\e[1;30m\]:\[\e[0;37m\]${SSH_TTY} \[\e[0;32m\]+${SHLVL}\[\e[1;30m\]] \[\e[1;37m\]\w\[\e[0;37m\] \n($SHLVL:\!)\$ '
+function doit {
+      local git_status=$(git status 2> /dev/null)
+      echo "$git_status"
+}
+
+function gitline {
+	local git_branch=$( git name-rev HEAD 2> /dev/null | sed 's/HEAD\ \(.\)/\1/' )
+	local git_version=$( git show --abbrev-commit --abbrev=8 2> /dev/null| sed -n 's/^commit\ \(.\{8\}\)/\1/p' )
+	local git_status=$( git status 2> /dev/null )
+	local git_staged=$( echo "$git_status" | sed -n 's/# Changes to be committed:/S/p' )
+	local git_modified=$( echo "$git_status" | sed -n 's/# Changes not staged for commit:/M/p' )
+	local git_unmerged=$( echo "$git_status" | sed -n 's/# Unmerged paths:/M/p' )
+	local git_untracked=$( echo "$git_status" | sed -n 's/# Untracked files:/U/p' )
+
+	if [ "$git_branch" == "" ]; then
+		echo -en " ${White}${On_Red}unversioned${Color_Off}"
+	else
+		echo -en " [git:${Red}"$git_branch"${Color_Off}:${Yellow}"$git_version"${Color_Off}]${Green}$git_staged${Color_Off}${Purple}${On_White}$git_modified${Color_Off}${White}${On_Red}$git_unmerged${Color_Off}${Blue}${On_White}$git_untracked${Color_Off}"
+	fi
+}
+
+# I can barely read this but it's so sexy in a console
+PROMPT_COMMAND='echo -en "\n";history -a;echo -en "\033[m\033[38;5;2m"$(( `sed -nu "s/MemFree:[\t ]\+\([0-9]\+\) kB/\1/p" /proc/meminfo`/1024))"\033[38;5;22m/"$((`sed -nu "s/MemTotal:[\t ]\+\([0-9]\+\) kB/\1/Ip" /proc/meminfo`/1024 ))MB"\t\033[m\033[38;5;55m$(< /proc/loadavg)\033[m";echo -en "$(gitline)"'
+PS1='\[\e[m\n\e[1;30m\][$$:$PPID \j:\!\[\e[1;30m\]]\[\e[0;36m\] \T \d \[\e[1;30m\][\[\e[1;34m\]\u@\H\[\e[1;30m\]:\[\e[0;37m\]${SSH_TTY} \[\e[0;32m\]+${SHLVL}\[\e[1;30m\]] \[\e[1;37m\]\w\[\e[0;37m\] \n($SHLVL:\!)\$ '
  
