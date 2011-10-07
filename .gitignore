@@ -6,3 +6,4 @@
 .ssh/known_hosts
 *.swp
 *.swo
+.config/aurvote
