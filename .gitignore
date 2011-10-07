@@ -6,3 +6,7 @@
 .ssh/known_hosts
 *.swp
 *.swo
+ggnome/*
+.gem/*
+.npm/*
+.mysql_history
