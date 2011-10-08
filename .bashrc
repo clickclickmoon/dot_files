@@ -2,7 +2,10 @@
 
 # Kill non-interactive sessions and start tmux
 [[ $- != *i* ]] && return
-[[ $TERM != "screen" ]] && tmux && exit
+[[ $TERM != "screen" ]] && tmux list-sessions
+
+# start ssh-agent
+eval `ssh-agent`
 
 # Show a random custom cowfile with an obsense fortune
 cowfile=`ls ~/cowfiles/*.cow | sort -R | tail -1`
@@ -19,6 +22,9 @@ Purple='\e[0;35m'
 White='\e[0;37m'
 On_Red='\e[41m'
 On_White='\e[47m'
+
+# Allow sudo aliases to work
+alias sudo='A=`alias` sudo '
 
 # ls aliases that I like a lot
 alias ls='ls --color=auto'
