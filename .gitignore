@@ -7,3 +7,4 @@
 *.swp
 *.swo
 .config/aurvote
+.ssh/authorized_keys
